@@ -1,0 +1,19 @@
+<form #userForm="ngForm" novalidate (ngSubmit)="onSubmit(userForm)">
+  <input type="text" name="userid" placeholder="userid" ngModel />
+  <input type="password" name="password" placeholder="password" ngModel />
+  <button>submit</button>
+</form>
+<hr />
+<form
+  #userForm2="ngForm"
+  (ngSubmit)="onUserForm2Submit(userForm2.value)"
+  novalidate
+>
+  <input type="text" name="userid" placeholder="id" ngModel />
+  <div ngModelGroup="password">
+    <input type="password" name="password1" placeholder="password" ngModel />
+    <input type="password" name="password2" placeholder="password" ngModel />
+  </div>
+  <button>submit</button>
+</form>
+<hr />
